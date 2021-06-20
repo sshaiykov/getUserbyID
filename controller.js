@@ -58,9 +58,7 @@ exports.getOneUser = async function(req, res) {
  exports.getAllUsers = async function(req, res) {
      try {
     
-        const user = req.body;
-
-        const getAllUsers = await UserModel.find(user);
+        const getAllUsers = await UserModel.find();
 
         res.status(200).json({
             message: 'Пользователи успешно получены из БД!',
